@@ -13,5 +13,15 @@ public class Book {
         this.published = published;
     }
 
+    public String getTitle() {
+        return title;
+    }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public Date getPublished() {
+        return published;
+    }
 }
