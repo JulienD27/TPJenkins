@@ -13,5 +13,6 @@ class TestBook {
         assertEquals("The Hobbit", book.title);
         assertEquals("J.R.R. Tolkien", book.author);
         assertEquals(new Date(1937, Calendar.OCTOBER, 21), book.published);
+        System.out.println(book.toString());
     }
 }
