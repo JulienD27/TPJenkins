@@ -1,6 +1,5 @@
 package ex2;
 
-import exercice2.Account;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -11,9 +10,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class testAccount {
     private static Stream<Account> accountProvider() {
         return Stream.of(
-                new Account("A1", 100.0, 0.01),
-                new Account("A2", 500.0, 0.02),
-                new Account("A3", 1000.0, 0.03)
+                new Account("Account1", 100.0, 0.01),
+                new Account("Account2", 500.0, 0.02),
+                new Account("Account3", 100.0, 0.03)
         );
     }
     @ParameterizedTest
@@ -55,7 +54,7 @@ public class testAccount {
     @ParameterizedTest
     @MethodSource("accountProvider")
     public void testTransfer(Account account) {
-        Account account2 = new Account("A4", 200.0, 0.02);
+        Account account2 = new Account("Account4", 200.0, 0.02);
         double montant = 50.0;
         double expectedSolde1 = account.getSolde() - montant;
         double expectedSolde2 = account2.getSolde() + montant;

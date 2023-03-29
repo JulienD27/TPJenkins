@@ -1,4 +1,4 @@
-package exercice3;
+package ex3;
 
 public class Delivery {
     public static double calculateCost(int distance, double weight) {

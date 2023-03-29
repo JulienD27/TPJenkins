@@ -1,21 +1,13 @@
 package ex2;
 
-import exercice2.Account;
-import exercice2.Bank;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
-
-import java.util.stream.Stream;
-
-import static org.junit.Assert.assertEquals;
 
 public class testBank {
     @Test
     void testBank() {
-        Account account = new Account("A1", 1000.0, 0.01);
-        Account account2 = new Account("A2", 2000.0, 0.02);
+        Account account = new Account("Account1", 1000.0, 0.01);
+        Account account2 = new Account("Account2", 2000.0, 0.02);
 
         Bank bank = new Bank();
         bank.addAccount(account);
